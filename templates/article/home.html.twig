@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Hello you</h1>
+    <div>
+        {% if age>18 %}
+            Vous êtes majeur, cf {{ age }} ans.
+        {% endif %}
+    </div>
+    <article>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque cum, ea eaque facere inventore magni! Alias assumenda
+            consequatur dolores id, ipsa itaque minima nesciunt quis quo. Asperiores aspernatur atque, doloremque ea iusto,
+            mollitia praesentium qui sunt tempore totam velit veritatis.</p>
+        <p>Asperiores consequatur consequuntur, cum ea
+            fugiat illo iste, iusto maxime modi nobis nulla perferendis quasi qui quos repellat sequi tempora voluptate.
+            Aperiam, consequatur deleniti deserunt eaque earum impedit ipsum laboriosam nemo nulla perspiciatis quisquam rem sed
+            similique unde vero voluptate?</p>
+        <a href="{{ path('blog') }}" class="btn btn-primary">Accès au blog</a>
+    </article>
+{% endblock %}
