@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+{% form_theme formArticle 'bootstrap_4_layout.html.twig' %}
+
+{% block body %}
+
+    {% if editMode %}
+        <h1>Modification d'un article</h1>
+    {% else %}
+        <h1>Création d'un article</h1>
+    {% endif %}
+    {{ form_start(formArticle) }}
+        {{ form_widget(formArticle) }}
+        <button type="submit" class="btn btn-primary">
+            {% if editMode %}
+                Mettre à jour
+            {% else %}
+                Ajouter l'article
+            {% endif %}
+        </button>
+    {{ form_end(formArticle) }}
+
+{% endblock %}

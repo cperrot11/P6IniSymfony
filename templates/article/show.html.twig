@@ -7,7 +7,7 @@
         <article>
             <h2>{{ article.title}}</h2>
             <div class="metadata">Ecrit le {{ article.createdAt | date('Y/m/d') }} à {{ article.createdAt | date('H:i') }}</div>
-            <div class="content"><img src=article.picture alt="">
+            <div class="content"><img src={{ article.picture }} alt="">
                 {{ article.content | raw }}
                 <a href="{{ path('home') }}" class="btn btn-primary">Retour</a>
             </div>
